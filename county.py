@@ -18,7 +18,7 @@ class County:
     def get_data(self, labels_list):
         sdate = datetime.date(2020, 3, 22)   # start date || this is the first day that JHU posted data for MDC
         edate = datetime.date.today()   # end date || currently set to yesterday's date because it turned to midnight and I was getting an error cause JHU did not publish it yet for 3/28
-
+    
         delta = edate - sdate       # as timedelta
         
       
@@ -99,7 +99,9 @@ class County:
 
     def get_all_values(self):
         sdate = datetime.date(2020, 3, 22)   # start date || this is the first day that JHU posted data for MDC
-        edate = datetime.date.today()   # end date || currently set to yesterday's date because it turned to midnight and I was getting an error cause JHU did not publish it yet for 3/28
+        # edate = datetime.date.today()   # end date || currently set to yesterday's date because it turned to midnight and I was getting an error cause JHU did not publish it yet for 3/28
+        edate = datetime.date(2020, 3, 22)
+        
 
         delta = edate - sdate       # as timedelta
 
@@ -157,7 +159,7 @@ class County:
 
 
     def get_date(self):
-        return str(datetime.date.today() )
+        return str(datetime.date.today())
 
 
 # final_df = pd.DataFrame(data = new_list, columns= ('Date', 'Number of cases'))
