@@ -11,7 +11,7 @@ import county
 
 final_list= []
 
-input_type = input('Would you like to search by name(1) or by FIPS(0)? >')
+input_type = input('\n\nWould you like to search by name(1) or by FIPS(0)? >')
 
 
 
@@ -20,7 +20,7 @@ if input_type == '1':
     new_name = input('''\nWhat is the exact name of the county you would like searched up 
                         \nPlease enter the county name without ( -county) at the end and in title format with the first letter of each new word capitalized. 
                         \nFor example, Miami-Dade County should be entered as "Miami-Dade". 
-                        \nNow please enter your county name. >  ''')
+                        \nNow please enter your county name. >''')
 
     new_county = county.County(county_name= new_name)
     county = new_county.get_name()
@@ -34,7 +34,7 @@ if input_type == '1':
 
 
     #'FIPS', 'Admin2', 'Province_State', 'Country_Region', 'Last_Update', 'Lat', 'Long_', 'Confirmed', 'Deaths', 'Recovered', 'Active', 'Combined_Key'
-    labels_list = ['Last_Update','FIPS', 'Admin2', 'Province_State', 'Country_Region',   'Confirmed', 'Deaths', 'Recovered', 'Combined_Key']
+    labels_list = ['Last_Update','FIPS', 'Admin2', 'Province_State', 'Country_Region',   'Confirmed', 'Deaths', 'Combined_Key']
     init_list = new_county.get_data(labels_list)
 
     size = len(init_list) 
@@ -56,7 +56,7 @@ if input_type == '1':
     except FileNotFoundError:
         print('No file to delete.')
         
-        
+
 #TODO Make python create a new path for each new county searched up so that the files are stored better.
     final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
     print(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''')
@@ -92,7 +92,7 @@ elif input_type == '0':
 
 
     #'FIPS', 'Admin2', 'Province_State', 'Country_Region', 'Last_Update', 'Lat', 'Long_', 'Confirmed', 'Deaths', 'Recovered', 'Active', 'Combined_Key'
-    labels_list = ['Last_Update', 'FIPS', 'Admin2', 'Province_State', 'Country_Region',   'Confirmed', 'Deaths', 'Recovered', 'Combined_Key']
+    labels_list = ['Last_Update', 'FIPS', 'Admin2', 'Province_State', 'Country_Region',   'Confirmed', 'Deaths', 'Combined_Key']
     init_list = new_county.get_data(labels_list)
 
     size = len(init_list) 
