@@ -1,0 +1,2 @@
+make an instagram app that posts updates about the status of corona virus in MIAMI-DADE
+  https://stackoverflow.com/questions/26357137/csv-to-image-in-python
