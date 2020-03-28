@@ -47,7 +47,8 @@ if input_type == '1':
             ([size] if idx_list[-1] != size else []))] 
 
 
-    final_df = pd.DataFrame(data = res, columns=labels_list+['|||'] )
+    printable_labels_list = ['Last Updated','FIPS', 'County Name', 'State', 'Country',   'Total Confirmed Cases', 'Total Confirmed Deaths', 'Location']
+    final_df = pd.DataFrame(data = res, columns=printable_labels_list+['|||'] )
     print(final_df)
     
     if county == 'Miami-Dade':
@@ -115,7 +116,8 @@ elif input_type == '0':
 
 
 
-    final_df = pd.DataFrame(data = res, columns=labels_list+['|||'] )
+    printable_labels_list = ['Last Updated','FIPS', 'County Name', 'State', 'Country',   'Total Confirmed Cases', 'Total Confirmed Deaths', 'Location']
+    final_df = pd.DataFrame(data = res, columns=printable_labels_list+['|||'] )
     print(final_df)
     
    
