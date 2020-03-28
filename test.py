@@ -21,7 +21,7 @@ date = miami_dade.get_date()
 # print(miami_dade.get_labels())
 # final_list = miami_dade.get_data()
 
-labels_list = ['Last_Update', 'FIPS', 'Admin2', 'Province_State', 'Country_Region',  'Lat', 'Long_', 'Confirmed', 'Deaths', 'Recovered', 'Active', 'Combined_Key']
+labels_list = ['Last_Update', 'Admin2', 'Province_State', 'Country_Region',   'Confirmed', 'Deaths', 'Recovered', 'Combined_Key']
 init_list = miami_dade.get_data(labels_list)
 
 size = len(init_list) 
@@ -42,11 +42,11 @@ res = [init_list[i: j] for i, j in
 final_df = pd.DataFrame(data = res, columns=labels_list+['|||'] )
 print(final_df)
   
-# try:
-#     os.remove(f'''D:\Programming Projects\MDC-COVID-19\{county}-COVID.csv''')
-#     print('Old file deleted')
-# except FileNotFoundError:
-#     print('No file to delete.')
+try:
+    os.remove(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''')
+    print('Old file deleted')
+except FileNotFoundError:
+    print('No file to delete.')
     
 
 final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
