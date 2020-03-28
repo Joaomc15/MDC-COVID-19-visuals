@@ -13,6 +13,7 @@ final_list= []
 
 miami_dade = county.County(county_name= 'Miami-Dade', final_list=final_list)
 county = miami_dade.get_name()
+date = miami_dade.get_date()
 
 
 # final_list.append(miami_dade.get_all_values())
@@ -48,10 +49,10 @@ print(final_df)
 #     print('No file to delete.')
     
 
-final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\{county}-COVID-19.csv''' , index = False, header=True)
-print(f'''New file created at: D:\Programming Projects\MDC-COVID-19\{county}-COVID.csv''')
+final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
+print(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''')
 
-pic_array = genfromtxt(f'''{county}-COVID-19.csv ''', delimiter=',')
+
 
 
 # print(new_list)

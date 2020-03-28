@@ -159,6 +159,10 @@ class County:
         return self.name
 
 
+    def get_date(self):
+        return str(datetime.date.today() )
+
+
 # final_df = pd.DataFrame(data = new_list, columns= ('Date', 'Number of cases'))
 # print(final_df)
 
