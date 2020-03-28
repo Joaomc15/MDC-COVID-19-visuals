@@ -1,7 +1,7 @@
-Last_Update,FIPS,Admin2,Province_State,Country_Region,Confirmed,Deaths,Recovered,Combined_Key,|||
-3/22/20 23:45,12011.0,Broward,Florida,US,217,3,0,"Broward, Florida, US",|||
-2020-03-23 23:19:34,12011.0,Broward,Florida,US,263,3,0,"Broward, Florida, US",|||
-2020-03-24 23:37:31,12011.0,Broward,Florida,US,311,3,0,"Broward, Florida, US",|||
-2020-03-25 23:33:19,12011.0,Broward,Florida,US,355,3,0,"Broward, Florida, US",|||
-2020-03-26 23:48:35,12011.0,Broward,Florida,US,504,3,0,"Broward, Florida, US",|||
-2020-03-27 22:14:55,12011.0,Broward,Florida,US,614,5,0,"Broward, Florida, US",|||
+Last_Update,FIPS,Admin2,Province_State,Country_Region,Confirmed,Deaths,Combined_Key,|||
+3/22/20 23:45,12011.0,Broward,Florida,US,217,3,"Broward, Florida, US",|||
+2020-03-23 23:19:34,12011.0,Broward,Florida,US,263,3,"Broward, Florida, US",|||
+2020-03-24 23:37:31,12011.0,Broward,Florida,US,311,3,"Broward, Florida, US",|||
+2020-03-25 23:33:19,12011.0,Broward,Florida,US,355,3,"Broward, Florida, US",|||
+2020-03-26 23:48:35,12011.0,Broward,Florida,US,504,3,"Broward, Florida, US",|||
+2020-03-27 22:14:55,12011.0,Broward,Florida,US,614,5,"Broward, Florida, US",|||

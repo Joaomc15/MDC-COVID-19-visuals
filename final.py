@@ -50,16 +50,26 @@ if input_type == '1':
     final_df = pd.DataFrame(data = res, columns=labels_list+['|||'] )
     print(final_df)
     
-    try:
-        os.remove(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''')
-        print('Old file deleted')
-    except FileNotFoundError:
-        print('No file to delete.')
-        
+    if county == 'Miami-Dade':
+        try:
+            os.remove(f'D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\03-March\{date}-{county}-COVID-19_Update.csv')
+            print('Old file deleted')
+        except FileNotFoundError:
+            print('No file to delete.')
 
-#TODO Make python create a new path for each new county searched up so that the files are stored better.
-    final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
-    print(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''')
+        # final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\3-March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
+        final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
+        print(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\03-March{date}-{county}-COVID-19_Update.csv''')
+
+    else:
+        try:
+            os.remove(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''')
+            print('Old file deleted')
+        except FileNotFoundError:
+            print('No file to delete.')
+
+        final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
+        print(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''')
 
 
 
@@ -109,17 +119,30 @@ elif input_type == '0':
     final_df = pd.DataFrame(data = res, columns=labels_list+['|||'] )
     print(final_df)
     
-    try:
-        os.remove(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''')
-        print('Old file deleted')
-    except FileNotFoundError:
-        print('No file to delete.')
+   
         
 #TODO Make python create a new path for each new county searched up so that the files are stored better.
 
-    final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
-    print(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''')
+    if county == 'Miami-Dade':
+        try:
+            os.remove(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\03-March\{date}-{county}-COVID-19_Update.csv''')
+            print('Old file deleted')
+        except FileNotFoundError:
+            print('No file to delete.')
 
+        # final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\03-March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
+        final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
+        print(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\03-March{date}-{county}-COVID-19_Update.csv''')
+
+    else:
+        try:
+            os.remove(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''')
+            print('Old file deleted')
+        except FileNotFoundError:
+            print('No file to delete.')
+
+        final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
+        print(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''')
 
 
 
