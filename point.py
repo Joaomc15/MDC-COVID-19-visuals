@@ -4,7 +4,7 @@ class Point:
         self.Date = date
         self.Cases= cases
     
-    def get_point(self):
+def get_point(self):
         return(self.Date, self.Cases)
 
         
