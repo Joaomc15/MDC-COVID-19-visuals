@@ -11,9 +11,10 @@ from numpy import genfromtxt
 
 final_list= []
 
-miami_dade = county.County(county_name= 'Miami-Dade', final_list=final_list)
-county = miami_dade.get_name()
-date = miami_dade.get_date()
+
+new_county = county.County(county_name= 'Miami-Dade')
+county = new_county.get_name()
+date = new_county.get_date()
 
 
 # final_list.append(miami_dade.get_all_values())
@@ -21,8 +22,12 @@ date = miami_dade.get_date()
 # print(miami_dade.get_labels())
 # final_list = miami_dade.get_data()
 
-labels_list = ['Last_Update', 'Admin2', 'Province_State', 'Country_Region',   'Confirmed', 'Deaths', 'Recovered', 'Combined_Key']
-init_list = miami_dade.get_data(labels_list)
+
+
+
+#'FIPS', 'Admin2', 'Province_State', 'Country_Region', 'Last_Update', 'Lat', 'Long_', 'Confirmed', 'Deaths', 'Recovered', 'Active', 'Combined_Key'
+labels_list = ['Last_Update','FIPS', 'Admin2', 'Province_State', 'Country_Region',   'Confirmed', 'Deaths', 'Recovered', 'Combined_Key']
+init_list = new_county.get_data(labels_list)
 
 size = len(init_list) 
 idx_list = [idx + 1 for idx, val in
