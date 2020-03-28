@@ -52,13 +52,12 @@ if input_type == '1':
     
     if county == 'Miami-Dade':
         try:
-            os.remove(f'D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\03-March\{date}-{county}-COVID-19_Update.csv')
+            os.remove(f'D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\March\{date}-{county}-COVID-19_Update.csv')
             print('Old file deleted')
         except FileNotFoundError:
             print('No file to delete.')
 
-        # final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\3-March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
-        final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
+        final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
         print(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\03-March{date}-{county}-COVID-19_Update.csv''')
 
     else:
@@ -125,14 +124,14 @@ elif input_type == '0':
 
     if county == 'Miami-Dade':
         try:
-            os.remove(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\03-March\{date}-{county}-COVID-19_Update.csv''')
+            os.remove(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\March\{date}-{county}-COVID-19_Update.csv''')
             print('Old file deleted')
         except FileNotFoundError:
             print('No file to delete.')
 
         # final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\03-March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
         final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
-        print(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\03-March{date}-{county}-COVID-19_Update.csv''')
+        print(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\March{date}-{county}-COVID-19_Update.csv''')
 
     else:
         try:
