@@ -48,25 +48,28 @@ if input_type == '1':
     printable_labels_list = ['Last Updated','FIPS', 'County Name', 'State', 'Country',   'Total Confirmed Cases', 'Total Confirmed Deaths', 'Location']
     final_df = pd.DataFrame(data = res, columns=printable_labels_list+['|||'] )
     print(final_df)
+
+
+    
     
     if county == 'Miami-Dade':
         try:
-            os.remove(f'D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\March\{date}-{county}-COVID-19_Update.csv')
+            os.remove(f'D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\April\{date}-{county}-COVID-19_Update.csv')
             print('Old file deleted')
         except FileNotFoundError:
             print('No file to delete.')
 
-        final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
+        final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\April\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
         print(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\Miami-Dade\03-March{date}-{county}-COVID-19_Update.csv''')
 
     else:
         try:
-            os.remove(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''')
+            os.remove(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\April\{date}-{county}-COVID-19_Update.csv''')
             print('Old file deleted')
         except FileNotFoundError:
             print('No file to delete.')
 
-        final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
+        final_df.to_csv ( f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\April\{date}-{county}-COVID-19_Update.csv''' , index = False, header=True)
         print(f'''D:\Programming Projects\MDC-COVID-19\Git\MDC-COVID-19-visuals\CSV_file\March\{date}-{county}-COVID-19_Update.csv''')
 
 
