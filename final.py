@@ -3,8 +3,6 @@ from datetime import date, timedelta
 from point import Point
 import os
 from urllib.error import HTTPError
-import numpy as np
-from numpy import genfromtxt
 import FIPS
 import test
 import county
