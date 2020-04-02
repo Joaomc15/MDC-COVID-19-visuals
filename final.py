@@ -4,8 +4,10 @@ from point import Point
 import os
 from urllib.error import HTTPError
 import FIPS
-import test
 import county
+import test
+
+
 
 final_list= []
 
@@ -13,8 +15,10 @@ input_type = input('\n\nWould you like to search by name(1) or by FIPS(0)? >')
 
 
 
-if input_type == '1':
-    
+
+def by_name():   
+    import county 
+    # new_name = county_name
     new_name = input('''\nWhat is the exact name of the county you would like searched up 
                         \nPlease enter the county name without ( -county) at the end and in title format with the first letter of each new word capitalized. 
                         \nFor example, Miami-Dade County should be entered as "Miami-Dade". 
@@ -45,12 +49,14 @@ if input_type == '1':
             ([size] if idx_list[-1] != size else []))] 
 
 
+
+
     printable_labels_list = ['Last Updated','FIPS', 'County Name', 'State', 'Country',   'Total Confirmed Cases', 'Total Confirmed Deaths', 'Location']
     final_df = pd.DataFrame(data = res, columns=printable_labels_list+['|||'] )
     print(final_df)
 
 
-    
+
     
     if county == 'Miami-Dade':
         try:
@@ -78,6 +84,7 @@ if input_type == '1':
     # print(new_list)
         # for row in db:
         #     print(row)
+    return res
 
 
 
@@ -86,8 +93,9 @@ if input_type == '1':
 
 
 
-elif input_type == '0':
 
+
+def by_FIPS():
     new_FIPS = int(input('\nWhat is the FIPS number that you would like to search up? >'))
 
     new_county = FIPS.County(FIPS= new_FIPS)
@@ -151,7 +159,14 @@ elif input_type == '0':
     # print(new_list)
         # for row in db:
         #     print(row)
+    return res
 
+
+
+if input_type == '1':
+    by_name()
+elif input_type == '0':
+    by_FIPS()
 else:
     print("Invalid Input: not 1 or 0\nNow Closing...")
 
