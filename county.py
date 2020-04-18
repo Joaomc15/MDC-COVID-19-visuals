@@ -45,7 +45,9 @@ class County:
             if len(str(day))<2:
                 day = '0'+str(day)
             url = f'''https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/{month}-{day}-2020.csv'''
-                
+           
+
+                    
             try:
                 db = pd.read_csv(url, error_bad_lines=False)
                 df = pd.DataFrame(db)
